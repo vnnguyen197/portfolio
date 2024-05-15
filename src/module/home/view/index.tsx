@@ -11,7 +11,7 @@ export default function HomePage() {
     }, 3000);
 
     return (
-        <div className="p-[56px] flex flex-wrap sm:justify-center gap-[24px] hover:animate-fade-right" >
+        <div className="md:p-[56px] sm:p-[0px] flex flex-wrap sm:justify-center gap-[24px] hover:animate-fade-right" >
             <div className="rounded-[50%] border-dashed border-2 border-indigo-600p">
                 <Image className="rounded-[50%] md:w-[340px] md:h-[340px] sm:w-[200px] sm:h-[200px]" src={avatar} alt="avt developer" />
             </div>
