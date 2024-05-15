@@ -1,5 +1,5 @@
 export default function Footer() {
     return (
-        <div>footer</div>
+        <div className="bg-[var(--footer-divider)] h-[200px]">footer</div>
     )
 }

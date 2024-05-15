@@ -1,18 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
+  --bgr-linear: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  --bgr-primary: #353535;
+  --background-900: #0d0e12;
+  --gray-25: #fcfcfd;
+  --primary-500: cyan;
+  --primary-600: #00ebeb;
+  --background-600: #313343;
+  --background-700: #1b2330;
+  --primary-700: #00b6cf;
+  --primary-500-a30: rgba(0,255,255,.3);
+  --light-purple: #afb5d9;
+  --gray-100: #c4c5cc;
+  --gray-200: #eaecf0;
+  --background-800: #181a27;
+  --gray-50: #f6f6f6;
+  --gradient-60: rgba(4,5,28,.6);
+  --footer-divider: #344054;
+  --white: white;
+  --dark-grey: #98a2b3;
+  --black-a50: rgba(9,20,26,.5);
+  --error-400: #f97066;
+  --black-a80: rgba(9,20,26,.8);
+  --bg-900-a60: rgba(13,14,18,.6);
+  --black-2: #101828;
+  --black: #09141a;
+  --bgr-img: radial-gradient(circle at 50% 0, #000 29%, #4025a0 65%, #bcabf4);
 }
 
-@media (prefers-color-scheme: dark) {
-}
-
-body {
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body, * {
+  font-family: "Poppins", sans-serif;
+  background: var(--background-900);
+  color: var(--gray-25);
 }
