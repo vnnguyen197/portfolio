@@ -30,10 +30,16 @@
   --black-2: #101828;
   --black: #09141a;
   --bgr-img: radial-gradient(circle at 50% 0, #000 29%, #4025a0 65%, #bcabf4);
+  --background: white;
+  --foreground: black;
+}
+
+@layer base{
+  body {
+      @apply dark:bg-gray-800 bg-[#fcfcfd] 
+  }
 }
 
 body, * {
   font-family: "Poppins", sans-serif;
-  background: var(--background-900);
-  color: var(--gray-25);
 }

@@ -5,24 +5,28 @@ import { LINK_URL } from "@/constant"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import LoadingAvatar from "../Loading/components/LoadingAvatar"
+import { ThemeChanger } from "@/hooks/useTheme"
 
 export default function Header() {
     const [isShow, setIsShow] = useState(true)
     setTimeout(() => {
         setIsShow(false)
-    }, 1500);
+    }, 500);
 
     const router = useRouter()
     return (
-        <div className="bg-[rgba(9, 20, 26, .5)] flex flex-wrap justify-around items-center md:p-[36px] sm:gap-[24px] sm:p-[12px]">
+        <div className="flex flex-wrap md:justify-between items-center md:p-[36px] sm:gap-[24px] sm:p-[12px] sm:justify-center">
             <MenuLeft className="cursor-pointer flex items-center gap-[12px] animate-jump-in hover:animate-wiggle" onClick={() => router.push("/")}>
                 {isShow ? <LoadingAvatar /> : <Image className="rounded-[16px] w-[40px] h-[40px]" src={avatar} alt="avt developer" />}
                 <div className="text-[16px] font-semibold hover:text-[var(--primary-700)] hover:animate-wiggle">V.NNGUYEN</div>
             </MenuLeft>
-            <MenuRight className="flex gap-[24px] animate-jump-in">
+            <MenuRight className="flex justify-center items-center md:gap-[24px] sm:gap-[12px] animate-jump-in">
                 {LINK_URL?.map((item) => (
-                    <Item key={item.id} onClick={() => router.push(item.url)} className="hover:animate-wiggle-more hover:text-[var(--primary-700)] cursor-pointer sm:text-[14px]">{item.title}</Item>
+                    <Item key={item.id} onClick={() => router.push(item.url)} className="light:text-[var(--gray-25)] hover:animate-wiggle-more hover:text-[var(--primary-700)] cursor-pointer sm:text-[14px]">{item.title}</Item>
                 ))}
+                <MenuRight className="bg-white dark:bg-black">
+                    <ThemeChanger />
+                </MenuRight>
             </MenuRight>
         </div>
     )
@@ -36,18 +40,19 @@ const MenuLeft = styled.div`
 `
 
 const MenuRight = styled.div`
-    padding: 12px 24px;
+    padding: 10px 24px;
     border: 1px solid var(--background-600);
-    background: var(--background-700);
     border-radius: 30px;
+    @media (max-width: 576px) {
+        padding: 4px 12px;
+    }
 `
 
 const Item = styled.div`
-    background: var(--background-700);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
     @media (max-width: 576px) {
-        font-size: 14px;
+        font-size: 12px;
     }
 `

@@ -11,7 +11,7 @@ export default function LayoutProvides({ children }: ILayoutProvidesProps) {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Header />
-            <div className="w-full flex justify-center items-center p-[12px]">
+            <div className="w-full flex justify-center items-center p-[48px] pt-[0px]">
                 {children}
             </div>
         </Suspense>
