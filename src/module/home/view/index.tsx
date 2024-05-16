@@ -11,7 +11,7 @@ export default function HomePage() {
     }, 3000);
 
     return (
-        <div className="md:p-[56px] sm:p-[0px] flex flex-wrap sm:justify-center gap-[24px] hover:animate-fade-right" >
+        <div className="md:p-[56px] sm:p-[0px] flex flex-wrap sm:justify-center gap-[24px] md:hover:animate-fade-right sm:hover:animate-fade-up" >
             <div className="rounded-[50%] border-dashed border-2 border-indigo-600p">
                 <Image className="rounded-[50%] md:w-[340px] md:h-[340px] sm:w-[200px] sm:h-[200px]" src={avatar} alt="avt developer" />
             </div>
@@ -28,7 +28,7 @@ export default function HomePage() {
                     <div className="w-[100px] text-center cursor-pointer rounded-[24px] py-[12px] bg-[var(--dark-grey)] hover:animate-pulse">Contact</div>
                 </div>
             </div>
-            {/* <div>{`I'm a Frontend Engineer passionate about creating intuitive and engaging user experiences.`}</div> */}
+            <div className="text-[#555555] animate-fade-up">{`I'm a Frontend Engineer passionate about creating intuitive and engaging user experiences.`}</div>
         </div>
     )
 }
