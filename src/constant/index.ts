@@ -12,8 +12,8 @@ export const LINK_URL = [
     },
     {
         id: 3,
-        title: "Projects",
-        url: "projects"
+        title: "Blogs",
+        url: "blogs"
     },
     {
         id: 4,
